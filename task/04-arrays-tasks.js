@@ -23,7 +23,8 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-   throw new Error('Not implemented');
+  // throw new Error('Not implemented');
+  return arr.indexOf(value)
 }
 
 /**
@@ -39,6 +40,9 @@ function findElement(arr, value) {
  */
 function generateOdds(len) {
    throw new Error('Not implemented');
+   /* let arr = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31];
+   len = arr.length;
+   return arr.fill */
 }
 
 
@@ -54,7 +58,8 @@ function generateOdds(len) {
  *    [] => [] 
  */
 function doubleArray(arr) {
-   throw new Error('Not implemented');
+  // throw new Error('Not implemented');
+ return arr.concat(arr);
 }
 
 
@@ -70,7 +75,8 @@ function doubleArray(arr) {
  *    [] => [] 
  */
 function getArrayOfPositives(arr) {
-   throw new Error('Not implemented');
+  // throw new Error('Not implemented');
+ return arr.filter(item => item > 0)
 }
 
 /**
@@ -85,7 +91,8 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
-   throw new Error('Not implemented');
+  // throw new Error('Not implemented');
+  return arr.filter(item => typeof item === "string");
 }
 
 /**
@@ -103,6 +110,7 @@ function getArrayOfStrings(arr) {
  */
 function removeFalsyValues(arr) {
    throw new Error('Not implemented');
+   return arr.filter(item => typeof item === "boolean")
 }
 
 /**
@@ -116,7 +124,12 @@ function removeFalsyValues(arr) {
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
 function getUpperCaseStrings(arr) {
-   throw new Error('Not implemented');
+  // throw new Error('Not implemented');
+  //arr = 
+  let arr1 = arr.map(function(x){ 
+   return x.toUpperCase() 
+ });
+return arr1;
 }
 
 
@@ -131,7 +144,11 @@ function getUpperCaseStrings(arr) {
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
-   throw new Error('Not implemented');
+  // throw new Error('Not implemented');
+  var arr1 = arr.map (function(item) {
+   return item.length;
+})
+return arr1;
 }
 
 /**

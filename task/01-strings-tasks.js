@@ -138,7 +138,8 @@ function repeatString(value, count) {
  *   'ABABAB','BA' => 'ABAB'
  */
 function removeFirstOccurrences(str, value) {
-    throw new Error('Not implemented');
+   // throw new Error('Not implemented');
+   return str.replace(value, "");
 }
 
 /**
@@ -153,7 +154,8 @@ function removeFirstOccurrences(str, value) {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-    throw new Error('Not implemented');
+   // throw new Error('Not implemented');
+   return str.slice(1, -1);
 }
 
 
@@ -168,7 +170,8 @@ function unbracketTag(str) {
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
 function convertToUpperCase(str) {
-    throw new Error('Not implemented');
+  //  throw new Error('Not implemented');
+ return str.toUpperCase()
 }
 
 /**
@@ -182,7 +185,8 @@ function convertToUpperCase(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(str) {
-    throw new Error('Not implemented');
+  //  throw new Error('Not implemented');
+  return str.split(';')
 }
 
 /**
@@ -209,7 +213,24 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-    throw new Error('Not implemented');
+   // throw new Error('Not implemented');
+   let drawing = "";
+   for (let row = 1; row <= height; row++) {
+     // for first and last row and 
+         if (row === 1 || row === height) {
+       let filling = "─".repeat(width - 2);
+       if (row === 1) {
+         drawing = `┌${drawing}${filling}┐\n`;
+       } else {
+         drawing = `${drawing}└${filling}┘\n`;
+       }
+       // for middle
+     } else {
+       let filling = " ".repeat(width - 2);
+       drawing = `${drawing}│${filling}│\n`;
+     }
+   }
+   return drawing;
 }
 
 

@@ -118,7 +118,12 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-    throw new Error('Not implemented');
+    let ab = x1*x2 + y1*y2;
+    let a = Math.sqrt(Math.pow(x1, 2) + Math.pow(y1, 2));
+    let b = Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2));
+    return Math.acos(ab/(a*b));
+
+   // throw new Error('Not implemented');
 }
 
 /**
@@ -134,7 +139,9 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-    throw new Error('Not implemented');
+    //throw new Error('Not implemented');
+    let newValue = value + ""
+    return newValue.slice(-1)
 }
 
 
@@ -150,7 +157,9 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-    throw new Error('Not implemented');
+   // throw new Error('Not implemented');
+   let newValue = value + ""
+    return newValue
 }
 
 /**
@@ -167,7 +176,8 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelipidedDiagonal(a,b,c) {
-    throw new Error('Not implemented');
+  //  throw new Error('Not implemented');
+      return Math.sqrt(a*a+b*b+c*c)
 }
 
 /**
@@ -188,12 +198,15 @@ function getParallelipidedDiagonal(a,b,c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-    throw new Error('Not implemented');
+   // throw new Error('Not implemented');
+   let a = Math.pow(10, pow)
+   let b = Math.round(num/a)
+   return b*a
 }
 
 /**
  * Returns true is the number is prime; otherwise false.
- * See: https://en.wikipedia.org/wiki/Primality_test
+ * See: httpn.wiks://eipedia.org/wiki/Primality_test
  *
  * @param {number} n
  * @return {bool}
@@ -209,7 +222,7 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-    throw new Error('Not implemented');
+   throw new Error('Not implemented');
 }
 
 /**
