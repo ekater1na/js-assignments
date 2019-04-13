@@ -222,7 +222,16 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-   throw new Error('Not implemented');
+  // throw new Error('Not implemented');
+if (n == 1) {
+    return false;
+}
+for (var d = 2; d*d <= n; d++) {
+    if( n % d == 0) {
+        return false;
+    }
+}
+return true;
 }
 
 /**
@@ -241,7 +250,8 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-    throw new Error('Not implemented');
+   // throw new Error('Not implemented');
+   return Number(value)||def;
 }
 
 module.exports = {
