@@ -55,7 +55,7 @@ function getFizzBuzz(num) {
  */
 function getFactorial(n) {
    // throw new Error('Not implemented');
-   let value = n;
+  let value = n;
   for (let i = 1; i < n; i++) {
     value = value * i;
   }
@@ -76,7 +76,12 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-    throw new Error('Not implemented');
+  //  throw new Error('Not implemented');
+  let summ = 0;
+  for (let i = n1; i <= n2; i++) {
+  summ += i;
+   }
+   return summ;
 }
 
 
@@ -222,7 +227,9 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
-    throw new Error('Not implemented');
+ // throw new Error('Not implemented');
+ let str1 = str.split('').reverse().join('');
+ return str1;
 }
 
 
@@ -239,7 +246,9 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-    throw new Error('Not implemented');
+   // throw new Error('Not implemented');
+   let str = num + ""
+   return str.split('').reverse().join('');
 }
 
 
@@ -264,9 +273,8 @@ function reverseInteger(num) {
  *   4916123456789012 => false
  */
 function isCreditCardNumber(ccn) {
-    throw new Error('Not implemented');
-}
-
+   throw new Error('Not implemented');
+}  
 
 /**
  * Returns the digital root of integer:
@@ -309,8 +317,36 @@ function getDigitalRoot(num) {
  *   '{[(<{[]}>)]}' = true 
  */
 function isBracketsBalanced(str) {
-    throw new Error('Not implemented');
+   // throw new Error('Not implemented');
+   let stack = [];
+
+    let left = {
+        '{': '}',
+        '[': ']',
+        '(': ')',
+        '<': '>'
+    };
+
+    let right = {
+        '}': true,
+        ']': true,
+        ')': true,
+        '>': true
+    }
+
+    for (let i = 0; i < str.length; i++) {
+
+        let char = str[i];
+
+        if (left[char]) {
+            stack.push(char);
+        } else if (right[char]) {
+            if (left[stack.pop()] !== char) return false;
+        }
+    }
+    return stack.length === 0;
 }
+
 
 
 /**
